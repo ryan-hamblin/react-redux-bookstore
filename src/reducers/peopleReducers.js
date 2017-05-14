@@ -5,6 +5,8 @@ export default (state = [], action) =>{
                 ...state,
                 Object.assign({}, action.book)
             ];
+        case "FETCH_PEOPLE_SUCCESS":
+            return action.people;
         default:
             return state;
     }

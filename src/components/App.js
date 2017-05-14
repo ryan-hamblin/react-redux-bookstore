@@ -15,7 +15,7 @@ const App = (props) => {
                         <ul className="nav navbar-nav">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
-                        <li><Link to="/books">Book</Link></li>
+                        <li><Link to="/people">People</Link></li>
                         <li><Link to="/cart">Cart</Link></li>
                         </ul>
                     </div>
