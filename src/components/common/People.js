@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {Link} from 'react-router';
 import * as peopleActions from '../../actions/peopleActions';
 
 class People extends Component {
@@ -8,7 +9,7 @@ class People extends Component {
         super(props);
     }
 
-    submitPeople(input){
+    createPeople(input){
         this.props.createPeople(input);
     }
 
@@ -20,7 +21,7 @@ class People extends Component {
                 <h3>Star Wars Chars</h3>        
                 <ul>
                    {this.props.people.map((p,i)=>{
-                        return <li key={i}> {p.name}</li>
+                        return <li key={i}><Link to={"person/"+p.name}> {p.name} </Link></li>
                     })}
                 </ul>
                 <div>
@@ -30,7 +31,7 @@ class People extends Component {
                         
                         var input = {title: titleInput.value}
 
-                        this.submitPeople(input);
+                        this.createPeople(input);
 
                         e.target.reset();
                     }}>
